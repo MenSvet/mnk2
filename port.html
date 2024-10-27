@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюр</title>
+    
+    <meta name="author" content="Надежда Кожевникова">
+    <meta name="description" content="Профессиональные услуги маникюра и педикюра от частного мастера. Качественные материалы, индивидуальный подход и стильные дизайны для ваших ногтей. Записывайтесь на сеанс уже сегодня!">
+    <meta name="keywords" content="маникюр, педикюр, частный мастер, услуги маникюра, услуги педикюра, ногти, стильный маникюр, красивые ногти, уход за ногами, дизайн ногтей">
+    
+    <meta http-equiv="refresh" content="30">
+    
+    <link rel="stylesheet" href="static/styl es.css">
+    <link rel="stylesheet" href="static/stylesfon.css"> <!--ОТВЕЧАЕТ ЗА ФОН-->
+    <link rel="stylesheet" href="static/stylesstatyck.css"> <!--ОТВЕЧАЕТ ЗА СТАТИЧНЫЕ СТИЛИ (ШПАКА/ПОДВАЛ/НАВИГАЦИЯ)-->
+    <link rel="stylesheet" href="static/stylesPortfol.css"> <!--ОТВЕЧАЕТ ЗА СТИЛИ ПОРТФОЛИО-->
+    <script src="script/scriptModalFoto.js" defer></script> <!--СКРИПТ НА МОДАЛКУ-->
+    <script src="script/scriptMenu.js" defer></script> <!--СКРИПТ НА МЕНЮ-->
+    <link rel="stylesheet" href="static/stylesTXT.css"> <!--ОТВЕЧАЕТ ЗА ТЕКСТ-->
+    
+   
+</head>
+<body>
+
+    <!-- SVG Background -->
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 200" preserveAspectRatio="xMidYMid meet"> <!--Тут было <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">-->
+            <defs>
+                <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+                </radialGradient>
+            </defs>
+            <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)">
+                <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)">
+                <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)">
+                <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+            </rect>
+        </svg>
+    </div>
+<!--Навигация-->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/45.png" alt="Логотип" />
+        </div>
+<!--БУРГЕР-->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Главная</a></li>                
+                <li><a href="port.html">Портфолио</a></li>
+                <li><a href="index.html#promotions">Акции</a></li>
+                <li><a href="prays.html">Прайс</a></li>
+                <li><a href="bazainfo.html">Знания</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li class="qer"><a href="https://www.avito.ru/dzerzhinsk/predlozheniya_uslug/manikyurpedikyur_2217736543"target="_blank">Онлайн запись</a></li>
+            </ul>
+        </nav>
+        
+        
+    </div>
+    
+</header>
+
+
+<!--Навигация-->
+
+    <!-- Main content with padding-top for header -->
+    <main>
+      
+
+            <div class="gallery2">
+                
+                <div class="gallery2-item">
+                    <img src="img/2.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/3.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/4.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/5.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/6.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/7.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/8.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/9.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/10.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+
+                <div class="gallery2-item">
+                    <img src="img/11.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/12.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/13.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/14.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/15.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/15.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/17.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/18.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/19.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/20.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+                
+                <div class="gallery2-item">
+                    <img src="img/21.jpg" alt="Описание изображения 1" class="gallery2-img">
+        
+                </div>
+        
+            <!-- Модальное окно -->
+            <div id="modal2" class="modal2">
+                <span class="close">&times;</span>
+                <img class="modal2-content" id="modal2-img">
+               
+            </div>
+        
+            
+        
+
+   
+    
+    </main>
+
+    <footer>
+        <p>© 2024 Ваш мастер - Надежда.</p>
+        <p>Следите за мной на 
+            <a href="https://www.avito.ru/dzerzhinsk/predlozheniya_uslug/manikyurpedikyur_2217736543" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Avito_logo.svg" alt="Avito" style="width: 60px; height: auto; margin: 0 10px; vertical-align: middle;">
+            </a> 
+            и
+            <a href="https://vk.com/kojevnik_nails" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" alt="ВКонтакте" style="width: 33px; height: auto; margin: 0 10px; vertical-align: middle;">
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

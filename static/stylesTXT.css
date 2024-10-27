@@ -1,0 +1,129 @@
+/* Общие настройки шрифтов */
+body {
+    font-family: 'Georgia', sans-serif; /* Основной шрифт */
+    line-height: 1.5; /* Высота строки */
+}
+
+/* Заголовки */
+h1 {
+    font-size: clamp(50px, 4vw, 70px ); /* Размер заголовка 1 */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+h2 {
+    font-size: clamp(26px, 2vw, 36px ); /* Размер заголовка 2 */
+    font-weight: bold;
+}
+
+h3 {
+    font-size: clamp(20px, 1.6vw, 28px ); /* Размер заголовка 3 */
+    font-weight: bold;
+}
+
+/* Основной текст */
+p,ul,td,th {
+    font-size: clamp(18px, 1.6vw, 23px ); /* Размер основного текста */
+}
+
+/* Специальные классы для текста */
+.large-text {
+    font-size: 20px; /* Большой текст */
+}
+
+.small-text {
+    font-size: 12px; /* Маленький текст */
+}
+
+/* Стили для кнопок */
+.button {
+    font-size: 18px; /* Размер текста кнопок */
+    font-weight: bold;
+}
+
+/* Мобильные стили */
+
+a {
+    color: #007bff; /* Цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+a:hover {
+    color: #0056b3; /* Цвет текста ссылки при наведении */
+    /*text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+i {
+    color: #555; /* Цвет иконок */
+    margin-right: 5px; /* Отступ справа от иконки */
+    font-size: 1.2em; /* Размер иконки */
+    vertical-align: middle; /* Вертикальное выравнивание иконки */
+}
+
+/*ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК */
+
+.watermark {
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем к центру */
+    font-size: 5em; /* Размер шрифта для водяного знака */
+    color: rgba(0, 0, 0, 0.1); /* Цвет и прозрачность водяного знака */
+    pointer-events: none; /* Чтобы водяной знак не мешал взаимодействию с таблицей */
+    display: none; /* Скрываем по умолчанию */
+    text-align: center; /* Выравнивание текста по центру */
+    z-index: 0; /* Задать уровень слоя */
+    transform: translate(-50%, -50%) rotate(-30deg); /* Добавляем угол поворота */
+}
+@media print {
+    .watermark {
+        display: block; /* Показываем только при печати */
+    }
+}
+
+
+
+/*ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК ВОДЯНОЙ ЗНАК */
+
+/* Адаптивность таблиц для мобильных устройств */
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+    th, td {
+        border: none;
+        border-bottom: 1px solid black; /* Черные границы снизу для мобильных */
+    }
+}
+
+
+/* отзывы */
+
+/*имя*/
+.OTZ_BLK_STR_OTZV_OP h1 {
+    text-align: center;
+    font-size: clamp(22px, 2vw, 30px );
+    color: #555555;
+    font-weight: bold;
+}
+
+/*основной текст*/
+.OTZ_BLK_STR_OTZV_OP {
+    text-align: center;
+    font-size: clamp(18px, 1.6vw, 20px );
+    color: #333;
+    
+}
+
+/*дата*/
+.OTZ_BLK_STR_OTZV_OP h2 {
+    text-align:start;
+    font-size: clamp(16px, 1.5vw, 18px );
+    color: #4f4a8b;
+    
+}
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маникюр</title>
+    
+    <meta name="author" content="Надежда Кожевникова">
+    <meta name="description" content="Профессиональные услуги маникюра и педикюра от частного мастера. Качественные материалы, индивидуальный подход и стильные дизайны для ваших ногтей. Записывайтесь на сеанс уже сегодня!">
+    <meta name="keywords" content="маникюр, педикюр, частный мастер, услуги маникюра, услуги педикюра, ногти, стильный маникюр, красивые ногти, уход за ногами, дизайн ногтей">
+    
+    <meta http-equiv="refresh" content="3000">
+    
+    <link rel="stylesheet" href="static/stylesfon.css"> <!--ОТВЕЧАЕТ ЗА ФОН-->
+    <link rel="stylesheet" href="static/stylesstatyck.css"> <!--ОТВЕЧАЕТ ЗА СТАТИЧНЫЕ СТИЛИ (ШПАКА/ПОДВАЛ/НАВИГАЦИЯ)-->
+    <link rel="stylesheet" href="static/stylesprays.css"> <!--ОТВЕЧАЕТ ЗА ПРАЙС-->
+    <script src="script/scriptMenu.js" defer></script> <!--СКРИПТ НА МЕНЮ-->
+    <script src="script/scriptPrint.js" defer></script> <!--СКРИПТ НА ПЕЧАТЬ-->
+    <link rel="stylesheet" href="static/stylesTXT.css"> <!--ОТВЕЧАЕТ ЗА ТЕКСТ-->
+    <!-- Подключаем Font Awesome для использования значков -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- SVG Background -->
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 200" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
+                </radialGradient>
+                <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
+                    <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate>
+                    <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
+                    <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
+                </radialGradient>
+            </defs>
+            <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)">
+                <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)">
+                <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+            </rect>
+            <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)">
+                <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
+                <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+            </rect>
+        </svg>
+    </div>
+<!--Навигация-->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="img/45.png" alt="Логотип" />
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Главная</a></li>                
+                <li><a href="port.html">Портфолио</a></li>
+                <li><a href="index.html#promotions">Акции</a></li>
+                <li><a href="prays.html">Прайс</a></li>
+                <li><a href="bazainfo.html">Знания</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li class="qer"><a href="https://www.avito.ru/dzerzhinsk/predlozheniya_uslug/manikyurpedikyur_2217736543"target="_blank">Онлайн запись</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--Навигация-->
+<main >
+    
+
+    <div class="table-wrapper">
+        <div class="watermark">Kozhevnikova Nails Kozhevnikova Nails</div>
+    <table class="manicure-price-table" border="1">
+        <div class="watermark">Kozhevnikova Nails Kozhevnikova Nails</div>
+        
+        <thead>
+            <tr>
+                <th colspan="3">Прайс на маникюр</th>
+            </tr>
+            <tr>
+                <th class="wide-column">Услуга</th>
+                <th>Цена в руб.</th>
+                <th>Примерное время работы в мин.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Выравнивание ногтевой пластины</td>
+                <td>300</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Дизайн одного ногтя</td>
+                <td>50</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Доноращивание одного ногтя</td>
+                <td>150</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Коррекция наращённых ногтей</td>
+                <td>600</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Маникюр без покрытия</td>
+                <td>400</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Маникюр с покрытием гель-лак</td>
+                <td>600</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Маникюр с покрытием гель-лак (френч)</td>
+                <td>800</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Наращивание ногтей</td>
+                <td>1300</td>
+                <td>120</td>
+            </tr>
+            <tr>
+                <td>Парафинотерапия</td>
+                <td>600</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Ремонт одного ногтя</td>
+                <td>100</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Снятие чужого покрытия</td>
+                <td>100</td>
+                <td>7</td>
+            </tr>
+            <!--ТЕКСТ ТАБЛИЦЫ СКРЫТЫЙ-->
+            <tr class="print-only-row">
+                <td colspan="3">Информация в данном прайс-листе представлена для ознакомления и не является публичной офертой в соответствии с Гражданским кодексом РФ. Цены и услуги могут быть изменены без предварительного уведомления. Для уточнения стоимости и условий оказания услуг, пожалуйста, свяжитесь с мастером.</td>
+            </tr>
+            
+        </tbody>
+        
+    </table>
+    
+    <!-- Кнопка для печати маникюра -->
+    <div class="print-button-wrapper">
+        <button class="print-button" onclick="printManicureTable()">
+            <i class="fas fa-print"></i> <!-- Значок принтера -->
+            <span>Распечатать</span> <!-- Текст, который показывается при наведении -->
+        </button>
+    </div>
+
+
+
+</div>
+
+<div class="table-wrapper">   
+    <div class="watermark">Kozhevnikova Nails Kozhevnikova Nails</div>
+    <table class="pedicure-price-table" border="1">
+        <div class="watermark">Kozhevnikova Nails Kozhevnikova Nails</div>
+        <thead>
+            <tr>
+                <th colspan="3">Прайс на педикюр</th>
+            </tr>
+            <tr>
+                <th class="wide-column">Услуга</th>
+                <th>Цена в руб.</th>
+                <th>Примерное время работы в мин.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Обработка пальчиков без покрытия</td>
+                <td>500</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Обработка стопы и пальчиков без покрытия</td>
+                <td>700</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Обработка стопы без обработки пальчиков и без покрытия</td>
+                <td>400</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Педикюр с покрытием без обработки стопы</td>
+                <td>800</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Педикюр с покрытием и обработкой стопы</td>
+                <td>1300</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Снятие чужого покрытия</td>
+                <td>100</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Дизайн одного ногтя</td>
+                <td>50</td>
+                <td>3</td>
+            </tr>
+             <!--ТЕКСТ ТАБЛИЦЫ СКРЫТЫЙ-->
+             <tr class="print-only-row">
+                <td colspan="3">Информация в данном прайс-листе представлена для ознакомления и не является публичной офертой в соответствии с Гражданским кодексом РФ. Цены и услуги могут быть изменены без предварительного уведомления. Для уточнения стоимости и условий оказания услуг, пожалуйста, свяжитесь с мастером.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+ <!-- Кнопка для печати педикюра -->
+ <div class="print-button-wrapper">
+    <button class="print-button" onclick="printPedicureTable()">
+        <i class="fas fa-print"></i> <!-- Значок принтера -->
+        <span>Распечатать</span> <!-- Текст, который показывается при наведении -->
+    </button>
+</div>
+</div>    
+
+
+
+
+
+
+
+
+        
+    
+    <div class="PS">
+        <div class="PS2">
+            <p class="PS3">
+                Указанные цены действуют бессрочно и могут быть пересмотрены в будущем. 
+                Я прилагаю все усилия, чтобы поддерживать актуальность информации на своем сайте и 
+                регулярно обновлять данные, чтобы вы всегда имели доступ к самым свежим предложениям. 
+                Ваша поддержка и понимание очень важны для меня, и я ценю ваше доверие. 
+                Если у вас возникнут какие-либо вопросы или потребуется дополнительная информация, 
+                не стесняйтесь обращаться ко мне. Я всегда готова помочь!
+            </p>
+            <p class="PS4">
+                С любовью и заботой,<br>
+                Ваш верный мастер, Надя.
+            </p>
+        </div>
+    </div>
+
+
+
+</main>
+<footer>
+    <p>© 2024 Ваш мастер - Надежда.</p>
+    <p>Следите за мной на 
+        <a href="https://www.avito.ru/dzerzhinsk/predlozheniya_uslug/manikyurpedikyur_2217736543" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Avito_logo.svg" alt="Avito" style="width: 60px; height: auto; margin: 0 10px; vertical-align: middle;">
+        </a> 
+        и
+        <a href="https://vk.com/kojevnik_nails" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" alt="ВКонтакте" style="width: 33px; height: auto; margin: 0 10px; vertical-align: middle;">
+        </a>
+    </p>
+</footer>
+</body>
+</html>

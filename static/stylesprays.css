@@ -1,0 +1,169 @@
+/*ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА */
+
+/*СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ*/
+
+/* Скрываем строку с текстом на экране */
+.print-only-row {
+    display: none;
+}
+
+/* Показываем строку только при печати */
+@media print {
+    .print-only-row {
+        display: table-row; /* Отображаем строку как элемент таблицы */
+    }
+
+    /* Убираем кнопки при печати */
+    .print-button {
+        display: none;
+    }
+}
+
+/*СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ СКРЫТЫЙ ТЕКСТ*/
+
+
+
+/* Общие стили для всех таблиц */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 20px solid black; /* Черная граница для всей таблицы */
+}
+
+/* Стили заголовков для всех таблиц */
+th {
+    background: linear-gradient(135deg, #ff7eb3, #ff65a3);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid black; /* Черные границы для заголовков */
+    /*font-weight: bold;*/
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Стили ячеек для всех таблиц */
+td {
+    border: 2px solid black; /* Черные границы для ячеек */
+    padding: 12px;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-size: 20px;*/
+}
+
+/* Эффект наведения для строк внутри таблиц */
+table tr:hover {
+    background-color: #ff4081 !important;
+    color: white !important;
+    transform: scale(1.02); /* Увеличение строки при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
+}
+
+/* Чередование цветов для четных и нечетных строк */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Широкая колонка */
+.wide-column {
+    width: 250px;
+}
+
+
+/* Уникальные стили для таблицы маникюра */
+.manicure-price-table {
+    border-color: black;
+}
+
+/* Уникальные стили для таблицы педикюра */
+.pedicure-price-table {
+    border-color: black;
+}
+
+
+/*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*/
+
+/* Контейнер для таблицы и кнопки */
+.table-wrapper {
+    position: relative; /* Относительное позиционирование для родителя */
+    margin-bottom: 40px; /* Отступ снизу для каждой таблицы */
+}
+
+
+/* Стили для кнопки печати */
+.print-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 0px; /* Скрываем текст кнопки */
+    border-radius: 50%; /* Круглая кнопка */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: -25px; /* Прикрепляем к нижнему краю таблицы */
+    right: 10px; /* Прикрепляем к правому краю таблицы */
+}
+
+/* Значок принтера внутри кнопки */
+.print-button i {
+    font-size: 24px;
+}
+
+/* При наведении на кнопку */
+.print-button:hover {
+    width: 180px; /* Увеличиваем ширину кнопки */
+    font-size: 16px; /* Показываем текст */
+    border-radius: 25px; /* Скругленные углы */
+    padding: 12px 24px; /* Добавляем отступы */
+}
+
+.print-button:hover i {
+    margin-right: 10px; /* Отступ для иконки при показе текста */
+}
+
+/* Эффект при нажатии */
+.print-button:active {
+    background-color: #c00060;
+    transform: scale(0.98); /* Легкое уменьшение при клике */
+}
+
+
+
+/*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*//*КНОПКИ ПЕЧЯТИ*/
+
+
+
+
+
+/*ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА ТАБЛИЦА */
+
+/*Комментарий*/
+
+.PS {
+    flex: 1
+}
+
+.PS2 {
+    background-color: rgba(255, 255, 255, 0.479); 
+    border-radius: 30px; padding: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*!Комментарий*/

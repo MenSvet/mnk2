@@ -1,0 +1,529 @@
+.promotions-section {
+    /*font-size: 18px; /* Размер текста заголовка */
+    text-align: center;
+}
+/*первая карточка */
+.promotions-title {
+    /*font-size: 2em; /* Размер шрифта для заголовка секции */
+    color: #333; /* Темно-серый цвет текста заголовка */
+    margin-bottom: 20px; /* Отступ снизу заголовка */
+}
+
+.promotions-description,
+.promotions-note {
+    /*font-size: 1.1em; /* Размер шрифта для описаний и примечаний */
+    color: #000000; /* Светло-серый цвет текста */
+    margin-bottom: 20px; /* Отступ снизу для обоих элементов */
+}
+
+.promotion-container {
+    display: flex; /* Flexbox для карточек */
+    justify-content: center; /* Центрирует карточки по горизонтали */
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку при недостатке места */
+    gap: 15px; /* Промежуток в 15 пикселей между карточками */
+}
+.promotions-link {
+    /*font-size: 25px; /* Размер текста заголовка */
+}
+/*переворот*/
+.promotion-card-inner {
+    position: relative; /* Устанавливает относительное позиционирование */
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    height: 100%; /* Задает высоту 100% от родительского элемента */
+    transition: transform 0.6s; /* Плавный переход для трансформации */
+    transform-style: preserve-3d; /* Сохраняет 3D эффект */
+}
+
+.promotion-card:hover .promotion-card-inner {
+    transform: rotateY(180deg); /* Поворачивает карточку при наведении */
+}
+
+.promotion-card-front,
+.promotion-card-back {
+    position: absolute; /* Абсолютное позиционирование для обеих сторон */
+    width: 100%; /* Задает ширину 100% */
+    height: 100%; /* Задает высоту 100% */
+    backface-visibility: hidden; /* Скрывает заднюю сторону при повороте */
+    display: flex; /* Использует Flexbox для выравнивания содержимого */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    /*font-size: 24px; /* Размер шрифта */
+    color: #00000000; /* Прозрачный цвет текста */
+    border: 1px solid #00000000; /* Прозрачная рамка */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Прозрачная тень */
+}
+
+.promotion-card-front {
+    background-color: #ffffff00; /* Прозрачный фон для лицевой стороны */
+}
+
+.promotion-card-back {
+    background-color: #f8f8f800; /* Прозрачный фон для задней стороны */
+    transform: rotateY(180deg); /* Поворачивает заднюю сторону */
+}
+/*переворот*/
+
+.promotion-card {
+    background-color: #fff; /* Белый цвет фона для карточки */
+    border: 1px solid #000000; /* Светло-серая рамка вокруг карточки */
+    border-radius: 8px; /* Закругление углов карточки */
+    padding: 20px; /* Внутренние отступы внутри карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для создания объема */
+    width: 300px; /* Фиксированная ширина карточки */
+    height: 180px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для перемещения и тени при наведении */
+    position: relative; /* Для позиционирования псевдоэлементов */
+    overflow: hidden; /* Скрывает элементы, выходящие за пределы карточки */
+    /*фон карты*/
+    background: rgba(0, 0, 0, 0); /* Полупрозрачный фон для контраста */
+    background-image: url('fon/e4566778.jfif'); /* Замените на актуальный путь к вашему файлу */
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+}
+.promotion-card-title {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffff; /* Цвет фона */
+    padding: 5px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */ 
+    /*font-size: 24px; /* Размер текста для заголовка h1 */   
+}
+.promotion-card-description {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffffb2; /* Цвет фона */
+    padding: 1px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */
+    /*font-size: 16px; /* Размер текста для заголовка h1 */    
+}
+
+.promotion-card:hover {
+    transform: translateY(-5px); /* При наведении карточка поднимается на 5 пикселей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении для эффекта глубины */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/* Базовый стиль ленты (общий для всех карточек) */
+.promotion-card::before {
+    content: ''; /* Пустое содержимое для базового стиля */
+    position: absolute; /* Абсолютное позиционирование для ленты */
+    top: 10px;
+    right: -40px;
+    width: 120px; /* Фиксированная ширина ленты */
+    height: 30px; /* Фиксированная высота ленты */
+    background-color: #e74c3c; /* Цвет по умолчанию */
+    color: #fff; /* Белый цвет текста */
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    align-items: center; /* Центрирует текст по вертикали */
+    /*font-size: 0.9em; /* Размер шрифта текста */
+    /*font-weight: bold; /* Жирный текст */
+    transform: rotate(45deg); /* Поворот ленты на 45 градусов */
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+/* Лента для "Комплексный уход" */
+.promotion-card--nails::before {
+    content: '15%'; /* Текст для этой ленты */
+    background-color: #e74c3c; /* Красный фон */
+}
+
+/* Лента для акции "Приведи друга" */
+.promotion-card--friends::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #3498db; /* Синий фон */
+}
+
+/* Лента для "Специально для тебя" */
+.promotion-card--special::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #2ecc71; /* Зеленый фон */
+}
+
+/* Лента для "Подарочные сертификаты" */
+.promotion-card--gift::before {
+    content: '5%'; /* Текст для этой ленты */
+    background-color: #9b59b6; /* Фиолетовый фон */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/*первая карточка */
+
+/*вторая карточка */
+
+
+/*переворот*/
+.promotion2-card-inner {
+    position: relative; /* Устанавливает относительное позиционирование */
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    height: 100%; /* Задает высоту 100% от родительского элемента */
+    transition: transform 0.6s; /* Плавный переход для трансформации */
+    transform-style: preserve-3d; /* Сохраняет 3D эффект */
+}
+
+.promotion2-card:hover .promotion-card-inner {
+    transform: rotateY(180deg); /* Поворачивает карточку при наведении */
+}
+
+.promotion2-card-front,
+.promotion2-card-back {
+    position: absolute; /* Абсолютное позиционирование для обеих сторон */
+    width: 100%; /* Задает ширину 100% */
+    height: 100%; /* Задает высоту 100% */
+    backface-visibility: hidden; /* Скрывает заднюю сторону при повороте */
+    display: flex; /* Использует Flexbox для выравнивания содержимого */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    /*font-size: 24px; /* Размер шрифта */
+    color: #00000000; /* Прозрачный цвет текста */
+    border: 1px solid #00000000; /* Прозрачная рамка */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Прозрачная тень */
+}
+
+.promotion2-card-front {
+    background-color: #ffffff00; /* Прозрачный фон для лицевой стороны */
+}
+
+.promotion2-card-back {
+    background-color: #f8f8f800; /* Прозрачный фон для задней стороны */
+    transform: rotateY(180deg); /* Поворачивает заднюю сторону */
+}
+/*переворот*/
+
+.promotion2-card {
+    background-color: #fff; /* Белый цвет фона для карточки */
+    border: 1px solid #000000; /* Светло-серая рамка вокруг карточки */
+    border-radius: 8px; /* Закругление углов карточки */
+    padding: 20px; /* Внутренние отступы внутри карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для создания объема */
+    width: 300px; /* Фиксированная ширина карточки */
+    height: 180px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для перемещения и тени при наведении */
+    position: relative; /* Для позиционирования псевдоэлементов */
+    overflow: hidden; /* Скрывает элементы, выходящие за пределы карточки */
+    /*фон карты*/
+    background: rgba(0, 0, 0, 0); /* Полупрозрачный фон для контраста */
+    background-image: url('fon/e667.jfif'); /* Замените на актуальный путь к вашему файлу */
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+}
+.promotion2-card-title {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffff; /* Цвет фона */
+    padding: 5px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */ 
+    /*font-size: 24px; /* Размер текста для заголовка h1 */   
+}
+.promotion2-card-description {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffffb2; /* Цвет фона */
+    padding: 1px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */
+    /*font-size: 16px; /* Размер текста для заголовка h1 */    
+}
+
+.promotion2-card:hover {
+    transform: translateY(-5px); /* При наведении карточка поднимается на 5 пикселей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении для эффекта глубины */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/* Базовый стиль ленты (общий для всех карточек) */
+.promotion2-card::before {
+    content: ''; /* Пустое содержимое для базового стиля */
+    position: absolute; /* Абсолютное позиционирование для ленты */
+    top: 10px;
+    right: -40px;
+    width: 120px; /* Фиксированная ширина ленты */
+    height: 30px; /* Фиксированная высота ленты */
+    background-color: #e74c3c; /* Цвет по умолчанию */
+    color: #fff; /* Белый цвет текста */
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    align-items: center; /* Центрирует текст по вертикали */
+    /*font-size: 0.9em; /* Размер шрифта текста */
+    /*font-weight: bold; /* Жирный текст */
+    transform: rotate(45deg); /* Поворот ленты на 45 градусов */
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+/* Лента для "Комплексный уход" */
+.promotion2-card--nails::before {
+    content: '15%'; /* Текст для этой ленты */
+    background-color: #e74c3c; /* Красный фон */
+}
+
+/* Лента для акции "Приведи друга" */
+.promotion2-card--friends::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #3498db; /* Синий фон */
+}
+
+/* Лента для "Специально для тебя" */
+.promotion2-card--special::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #2ecc71; /* Зеленый фон */
+}
+
+/* Лента для "Подарочные сертификаты" */
+.promotion2-card--gift::before {
+    content: '5%'; /* Текст для этой ленты */
+    background-color: #9b59b6; /* Фиолетовый фон */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/*вторая карточка */
+
+/*третья карточка */
+
+/*переворот*/
+.promotion3-card-inner {
+    position: relative; /* Устанавливает относительное позиционирование */
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    height: 100%; /* Задает высоту 100% от родительского элемента */
+    transition: transform 0.6s; /* Плавный переход для трансформации */
+    transform-style: preserve-3d; /* Сохраняет 3D эффект */
+}
+
+.promotion3-card:hover .promotion-card-inner {
+    transform: rotateY(180deg); /* Поворачивает карточку при наведении */
+    
+}
+
+.promotion3-card-front,
+.promotion3-card-back {
+    position: absolute; /* Абсолютное позиционирование для обеих сторон */
+    width: 100%; /* Задает ширину 100% */
+    height: 100%; /* Задает высоту 100% */
+    backface-visibility: hidden; /* Скрывает заднюю сторону при повороте */
+    display: flex; /* Использует Flexbox для выравнивания содержимого */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    /*font-size: 24px; /* Размер шрифта */
+    color: #00000000; /* Прозрачный цвет текста */
+    border: 1px solid #00000000; /* Прозрачная рамка */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Прозрачная тень */
+}
+
+.promotion3-card-front {
+    background-color: #ffffff00; /* Прозрачный фон для лицевой стороны */
+}
+
+.promotion3-card-back {
+    background-color: #f8f8f800; /* Прозрачный фон для задней стороны */
+    transform: rotateY(180deg); /* Поворачивает заднюю сторону */
+}
+/*переворот*/
+
+.promotion3-card {
+    background-color: #fff; /* Белый цвет фона для карточки */
+    border: 1px solid #000000; /* Светло-серая рамка вокруг карточки */
+    border-radius: 8px; /* Закругление углов карточки */
+    padding: 20px; /* Внутренние отступы внутри карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для создания объема */
+    width: 300px; /* Фиксированная ширина карточки */
+    height: 180px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для перемещения и тени при наведении */
+    position: relative; /* Для позиционирования псевдоэлементов */
+    overflow: hidden; /* Скрывает элементы, выходящие за пределы карточки */
+    /*фон карты*/
+    background: rgba(0, 0, 0, 0); /* Полупрозрачный фон для контраста */
+    background-image: url('fon/q1.jfif'); /* Замените на актуальный путь к вашему файлу */
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+}
+.promotion3-card-title {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffff; /* Цвет фона */
+    padding: 5px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */ 
+    /*font-size: 24px; /* Размер текста для заголовка h1 */   
+}
+.promotion3-card-description {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffffb2; /* Цвет фона */
+    padding: 1px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */
+    /*font-size: 16px; /* Размер текста для заголовка h1 */    
+}
+
+.promotion3-card:hover {
+    transform: translateY(-5px); /* При наведении карточка поднимается на 5 пикселей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении для эффекта глубины */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/* Базовый стиль ленты (общий для всех карточек) */
+.promotion3-card::before {
+    content: ''; /* Пустое содержимое для базового стиля */
+    position: absolute; /* Абсолютное позиционирование для ленты */
+    top: 10px;
+    right: -40px;
+    width: 120px; /* Фиксированная ширина ленты */
+    height: 30px; /* Фиксированная высота ленты */
+    background-color: #e74c3c; /* Цвет по умолчанию */
+    color: #fff; /* Белый цвет текста */
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    align-items: center; /* Центрирует текст по вертикали */
+    /*font-size: 0.9em; /* Размер шрифта текста */
+    /*font-weight: bold; /* Жирный текст */
+    transform: rotate(45deg); /* Поворот ленты на 45 градусов */
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+/* Лента для "Комплексный уход" */
+.promotion3-card--nails::before {
+    content: '15%'; /* Текст для этой ленты */
+    background-color: #e74c3c; /* Красный фон */
+}
+
+/* Лента для акции "Приведи друга" */
+.promotion3-card--friends::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #3498db; /* Синий фон */
+}
+
+/* Лента для "Специально для тебя" */
+.promotion3-card--special::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #2ecc71; /* Зеленый фон */
+}
+
+/* Лента для "Подарочные сертификаты" */
+.promotion3-card--gift::before {
+    content: '5%'; /* Текст для этой ленты */
+    background-color: #9b59b6; /* Фиолетовый фон */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/*третья карточка */
+
+/*четверая карточка */
+
+
+/*переворот*/
+.promotion4-card-inner {
+    position: relative; /* Устанавливает относительное позиционирование */
+    width: 100%; /* Задает ширину 100% от родительского элемента */
+    height: 100%; /* Задает высоту 100% от родительского элемента */
+    transition: transform 0.6s; /* Плавный переход для трансформации */
+    transform-style: preserve-3d; /* Сохраняет 3D эффект */
+}
+
+.promotion4-card:hover .promotion-card-inner {
+    transform: rotateY(180deg); /* Поворачивает карточку при наведении */
+}
+
+.promotion4-card-front,
+.promotion4-card-back {
+    position: absolute; /* Абсолютное позиционирование для обеих сторон */
+    width: 100%; /* Задает ширину 100% */
+    height: 100%; /* Задает высоту 100% */
+    backface-visibility: hidden; /* Скрывает заднюю сторону при повороте */
+    display: flex; /* Использует Flexbox для выравнивания содержимого */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    /*font-size: 24px; /* Размер шрифта */
+    color: #00000000; /* Прозрачный цвет текста */
+    border: 1px solid #00000000; /* Прозрачная рамка */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Прозрачная тень */
+}
+
+.promotion4-card-front {
+    background-color: #ffffff00; /* Прозрачный фон для лицевой стороны */
+}
+
+.promotion4-card-back {
+    background-color: #f8f8f800; /* Прозрачный фон для задней стороны */
+    transform: rotateY(180deg); /* Поворачивает заднюю сторону */
+}
+/*переворот*/
+
+.promotion4-card {
+    background-color: #fff; /* Белый цвет фона для карточки */
+    border: 1px solid #000000; /* Светло-серая рамка вокруг карточки */
+    border-radius: 8px; /* Закругление углов карточки */
+    padding: 20px; /* Внутренние отступы внутри карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для создания объема */
+    width: 300px; /* Фиксированная ширина карточки */
+    height: 180px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для перемещения и тени при наведении */
+    position: relative; /* Для позиционирования псевдоэлементов */
+    overflow: hidden; /* Скрывает элементы, выходящие за пределы карточки */
+    /*фон карты*/
+    background: rgba(0, 0, 0, 0); /* Полупрозрачный фон для контраста */
+    background-image: url('fon/e45456.jfif'); /* Замените на актуальный путь к вашему файлу */
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+}
+.promotion4-card-title {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffff; /* Цвет фона */
+    padding: 5px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */ 
+    /*font-size: 24px; /* Размер текста для заголовка h1 */   
+      
+}
+.promotion4-card-description {
+    color: #000000; /* Цвет текста */
+    background-color: #ffffffb2; /* Цвет фона */
+    padding: 1px; /* Отступы вокруг текста */
+    border-radius: 15px; /* Скругленные углы */
+    /*font-size: 16px; /* Размер текста для заголовка h1 */    
+}
+
+.promotion4-card:hover {
+    transform: translateY(-5px); /* При наведении карточка поднимается на 5 пикселей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении для эффекта глубины */
+}
+
+/*ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты ЛЕНТЫ ленты */
+/* Базовый стиль ленты (общий для всех карточек) */
+.promotion4-card::before {
+    content: ''; /* Пустое содержимое для базового стиля */
+    position: absolute; /* Абсолютное позиционирование для ленты */
+    top: 10px;
+    right: -40px;
+    width: 120px; /* Фиксированная ширина ленты */
+    height: 30px; /* Фиксированная высота ленты */
+    background-color: #e74c3c; /* Цвет по умолчанию */
+    color: #fff; /* Белый цвет текста */
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    align-items: center; /* Центрирует текст по вертикали */
+    /*font-size: 0.9em; /* Размер шрифта текста */
+    /*font-weight: bold; /* Жирный текст */
+    transform: rotate(45deg); /* Поворот ленты на 45 градусов */
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+/* Лента для "Комплексный уход" */
+.promotion4-card--nails::before {
+    content: '15%'; /* Текст для этой ленты */
+    background-color: #e74c3c; /* Красный фон */
+}
+
+/* Лента для акции "Приведи друга" */
+.promotion4-card--friends::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #3498db; /* Синий фон */
+}
+
+/* Лента для "Специально для тебя" */
+.promotion4-card--special::before {
+    content: '10%'; /* Текст для этой ленты */
+    background-color: #2ecc71; /* Зеленый фон */
+}
+
+/* Лента для "Подарочные сертификаты" */
+.promotion4-card--gift::before {
+    content: '5%'; /* Текст для этой ленты */
+    background-color: #9b59b6; /* Фиолетовый фон */
+}

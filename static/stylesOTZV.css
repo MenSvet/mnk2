@@ -1,0 +1,136 @@
+/* Основной блок отзывов */
+.OTZ {
+    overflow: hidden;
+    max-width: 1200px; /* Максимальная ширина 600 пикселей */
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+/* Контейнер для всех страниц */
+.OTZ_BLK {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease; /* Плавная анимация для переключения страниц */
+}
+
+/* Отдельная страница */
+.OTZ_BLK_STR {
+    flex: 0 0 100%; /* Каждая страница занимает 100% ширины родителя */
+    display: flex;
+    flex-wrap: wrap; /* Позволяет отзывам переноситься на следующую строку */
+    justify-content: center; /* Центрируем отзывы */
+}
+
+/* Секция отзыва */
+.OTZ_BLK_STR_OTZV {
+    width: clamp(400px, 30%, 500px ); /* Ширина 25% с отступами */
+    margin: 5px; /* Отступы для создания пространства между отзывами */
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.884);
+}
+
+/* Звездный рейтинг */
+.OTZ_BLK_STR_OTZV_ZV {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    fill: rgb(255, 0, 0); /* Цвет для неактивных звезд */
+}
+
+.star.filled {
+    fill: gold; /* Цвет для закрашенных звезд */
+}
+
+/* Текст отзыва управляется отдельным файлом*/
+
+
+/* Изолированный стиль для кнопок управления в блоке отзывов */
+/* Контейнер для кнопок управления в блоке отзывов */
+/* Контейнер для кнопок управления в блоке отзывов */
+.otz-controls {
+    position: relative;             /* Переносим контейнер в обычный поток */
+    width: 100%;                    /* Занимает полную ширину родителя */
+    display: flex;
+    justify-content: center;        /* Центрируем кнопки */
+    gap: 20px;                      /* Расстояние между кнопками */
+    padding-top: 50px;              /* Отступ сверху для отдаления от отзывов */
+    /*margin-top: 10px;               /* Дополнительный отступ сверху */
+    z-index: 10;
+    background: transparent;        /* Убедимся, что фон прозрачный */
+    box-sizing: border-box;
+}
+
+/* Кнопка "Назад" */
+.otz-controls .otz-prev {
+    position: absolute;
+    left: 20px;                 /* Располагаем слева */
+    top: 50%;                   /* Центрируем по вертикали */
+    transform: translateY(-50%);
+    pointer-events: auto;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 11;                /* Поверх отзывов */
+    outline: none;
+}
+
+/* Кнопка "Вперед" */
+.otz-controls .otz-next {
+    position: absolute;
+    right: 20px;                /* Располагаем справа */
+    top: 50%;                   /* Центрируем по вертикали */
+    transform: translateY(-50%);
+    pointer-events: auto;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 11;                /* Поверх отзывов */
+    outline: none;
+}
+/* Стиль для центральной кнопки "Стоп" */
+.otz-controls .otz-stop {
+    background-color: #ffffff;
+}
+
+/* Эффект при наведении на кнопку "Стоп" */
+.otz-controls .otz-stop:hover {
+    background-color: #333333;
+}
+
+/* Фокус на кнопках */
+.otz-controls .otz-nav-button:focus {
+    outline: 2px solid #ffffff;
+}
+
+/* Эффект при наведении */
+.otz-controls .otz-prev:hover, .otz-controls .otz-next:hover {
+    background-color: #d40000;
+}
+
+/* Фокус на кнопке */
+.otz-controls .otz-prev:focus, .otz-controls .otz-next:focus {
+    outline: 2px solid #ffffff; /* Белый контур при фокусе */
+}
+

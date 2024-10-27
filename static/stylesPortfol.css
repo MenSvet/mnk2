@@ -1,0 +1,91 @@
+/* Основная галерея */
+.gallery2 {
+    display: flex; /* Используем флексбокс для расположения элементов */
+    flex-wrap: wrap; /* Элементы будут переноситься на новую строку, если не помещаются в одной */
+    gap: 3px; /* Расстояние между элементами галереи */
+    justify-content: center; /* Центрирование элементов по горизонтали */
+}
+
+.gallery2-item {
+    width: clamp(200px,14vw,400px); /* Ширина миниатюры */
+    height: clamp(200px,14vw,400px); /* Высота миниатюры */
+    overflow: hidden; /* Скрываем обрезанные части */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Изображения в миниатюрах */
+.gallery2-img {
+    width: 100%; /* Заполняем ширину родительского контейнера */
+    height: 100%; /* Заполняем высоту родительского контейнера */
+    object-fit: cover; /* Изображения будут обрезаться, чтобы заполнить контейнер без искажений */
+    cursor: pointer; /* Курсор изменяется на указатель при наведении */
+    transition: transform 0.2s; /* Плавный переход для эффекта увеличения */
+}
+
+/* Эффект увеличения при наведении */
+.gallery2-img:hover { 
+    transform: scale(1.05); /* Увеличение изображения на 5% */
+}
+
+/* Стили для модального окна */
+.modal2 {
+    display: none; /* Скрываем модалку по умолчанию */
+    position: fixed; /* Фиксируем модалку на экране */
+    z-index: 9999; /* Размещаем выше остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Занимаем всю ширину */
+    height: 100%; /* Занимаем всю высоту */
+    overflow: hidden; /* Убираем прокрутку */
+    background: rgba(0, 0, 0, 0.8); /* Темный фон с полупрозрачностью */
+    
+}
+
+.modal2-content {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на 50% ширины и высоты для точного центрирования */
+    max-width: 80%; /* Ограничиваем ширину 80% от ширины экрана */
+    max-height: 80%; /* Ограничиваем высоту 80% от высоты экрана */
+    object-fit: contain; /* Изображение сохраняет пропорции, подстраиваясь под размер */
+    border-radius: 15px; /* Закругленные углы для красивого вида */
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.modal2-content:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Увеличиваем изображение при наведении и сохраняем центрирование */
+}
+
+
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    /*font-size: 40px;*/
+    /*font-weight: bold;*/
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 30px;
+}
+/* Основная галерея */

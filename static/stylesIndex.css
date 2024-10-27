@@ -1,0 +1,247 @@
+/* Секции */
+section {
+    background: rgba(255, 255, 255, 0.678); /* Полупрозрачный белый фон для секций */
+    margin: 20px 0; /* Внешние отступы: 20 пикселей сверху и снизу, 0 слева и справа */
+    padding: 30px; /* Внутренние отступы: 30 пикселей со всех сторон */
+    border-radius: 12px; /* Закругляет углы секций радиусом 12 пикселей */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Добавляет тень к секциям: сдвиг по оси X 0, по оси Y 4 пикселя, размытие 10 пикселей, цвет с 15% непрозрачностью */
+    transition: transform 0.3s; /* Плавный переход для эффекта трансформации за 0.3 секунды */
+    max-width: 1200px; /* Максимальная ширина 600 пикселей */
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    margin: 15px auto; /* Отступы сверху и снизу, центровка по горизонтали */
+    /*clip-path: polygon(0 0, 90% 0, 90% 60px, 100% 60px , 100% 100% , 0 100%); */
+    
+}
+
+.section p {
+    /*font-size: 16px; /* Размер текста заголовка */
+}
+
+section:hover {
+    transform: scale(1.00); /* Увеличивает секцию на 2% при наведении курсора (эффект «увеличения») */
+}
+/*БАННЕР*/
+.banner {
+    background-image: url('static/fon/e4566778'); /* Замените на ваш URL изображения */
+    background-size: cover; /* Покрывает весь баннер */
+    background-position: center; /* Центрируем изображение */
+    height: 400px; /* Высота баннера */
+    display: flex; /* Используем flexbox для центрирования */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Для добавления полупрозрачного слоя */
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* Полупрозрачный черный слой */
+    z-index: 1; /* Устанавливаем слой ниже текста */
+}
+
+.banner-content {
+    position: relative; /* Для текстового блока */
+    z-index: 2; /* Поверх полупрозрачного слоя */
+    line-height: 0.69; /* Высота строки */
+}
+
+.banner-content h1 {
+    /*font-size: 3em; /* Размер заголовка */
+    margin: 0; /* Убираем отступы */
+}
+
+.banner-content p {
+    /*font-size: 1.5em; /* Размер подзаголовка */
+    margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.banner-content .btn {
+    display: inline-block; /* Делаем кнопку блочным элементом */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    background-color: #ff4081; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругляем углы */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.banner-content .btn:hover {
+    background-color: #1a29ff; /* Цвет кнопки при наведении */
+}
+
+/* Стили для изображения */
+.about-me img {
+    width: clamp(180px, 15vw, 235px); /* Уменьшаем изображение для компактности */
+    height: auto;
+    border-radius: 10px; /* Закругление углов */
+    margin-right: 15px; /* Меньший отступ справа */
+}
+
+/* Стили для текстового блока */
+.about-me .text {
+    flex: 1;
+}
+
+/* Стили для заголовка */
+.about-me h2 {
+    /*font-size: 20px; /* Уменьшаем размер заголовка */
+    color: #222; /* Более тёмный и контрастный цвет */
+    margin-bottom: 8px;
+}
+
+/* Стили для абзацев */
+.about-me p {
+    /*font-size: 14px; /* Меньший размер шрифта */
+    color: #444; /* Чуть темнее текст */
+    line-height: 1.5; /* Чуть компактнее интервал */
+    margin-bottom: 8px;
+}
+
+
+/*ОТЗЫВЫ*/
+
+
+
+/*ОТЗЫВЫ*/
+/*СТАТЬЯ*/
+/* Основные стили статьи */
+.newspaper-article {
+    max-width: 700px; /* Устанавливаем максимальную ширину */
+    padding: 20px; /* Добавляем внутренние отступы */
+    /*font-family: 'Georgia', serif; /* Добавляем элегантный шрифт */
+    line-height: 1.8; /* Устанавливаем высоту строки */
+    background-color: #91898900; /* Устанавливаем цвет фона */
+    border: 1px solid #dddddd00; /* Устанавливаем цвет и толщину рамки */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0); /* Добавляем тень */
+    
+}
+
+.text-container1 {
+    background-color: #f0e68c00; /* Цвет фона (можно выбрать любой) */
+    padding: 10px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Закругление углов (по желанию) */
+}
+
+
+
+.newspaper-article h1 {
+    text-align: center;
+    /*font-size: 36px;*/
+    margin-bottom: 30px;
+    color: #2c2c2c;
+}
+
+.newspaper-article .intro {
+    /*font-style: italic;*/
+    margin-bottom: 30px;
+    /*font-size: 20px;*/
+    color: #555;
+}
+
+/* Секции контента с изображениями и текстом */
+.content-section {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.before-image, .after-image {
+    width: clamp(250px, 35vw, 470px);
+    margin: 10px;
+    float: left;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1); /* Улучшаем тени для глубины */
+    transition: transform 0.3s ease; /* Добавляем плавные анимации */
+    border: 2px solid #000; /* Толщина и цвет рамки */
+    border-radius: 40px;    /* Закругленные углы (по желанию) */
+    padding: 0px;           /* Отступ между изображением и рамкой (по желанию) */
+}
+
+.after-image {
+    float: right;
+}
+
+/* При наведении добавляем масштабирование для лучшего эффекта */
+.before-image:hover, .after-image:hover {
+    transform: scale(1.05);
+}
+
+.content-section p {
+    text-align: justify;
+    margin-top: 0;
+    /*font-size: 18px;*/
+    color: #333;
+}
+
+/*карточки отдельно*/
+
+/*контакт*/
+.custom-contact__title {
+    /*font-size: 2em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет текста заголовка */
+    margin-bottom: 20px; /* Отступ снизу заголовка */
+}
+
+.custom-contact__info {
+    margin-bottom: 20px; /* Отступ снизу блока с информацией */
+}
+
+.custom-contact__question {
+    /*font-size: 1.2em; /* Размер шрифта для вопроса */
+    color: #333; /* Цвет текста */
+    margin: 5px 0; /* Отступы между параграфами */
+}
+
+.custom-contact__phone {
+    /*font-weight: bold; /* Жирный шрифт для телефона */
+    /*font-size: 1.5em; /* Увеличенный размер шрифта для телефона */
+}
+
+.custom-contact__appointment {
+    /*font-size: 1.2em; /* Размер шрифта для записи */
+    color: #333; /* Цвет текста */
+}
+
+.custom-contact__appointment-text {
+    margin: 0; /* Убираем отступы */
+}
+
+.custom-contact__link {
+    color: #3498db; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.custom-contact__link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.custom-contact__map {
+    margin-top: 30px; /* Отступ сверху для карты */
+}
+
+.custom-contact__map-title {
+    /*font-size: 1.5em; /* Размер шрифта заголовка карты */
+    color: #333; /* Цвет текста заголовка */
+    margin-bottom: 10px; /* Отступ снизу заголовка */
+}
+
+.custom-contact__address,
+.custom-contact__transport {
+    /*font-size: 1.1em; /* Размер шрифта для адреса и транспорта */
+    color: #333; /* Цвет текста */
+    margin: 5px 0; /* Отступы между параграфами */
+}
+
+.custom-contact__whatsapp {
+    margin-top: 20px; /* Отступ сверху для информации о WhatsApp */
+    /*font-size: 1.1em; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+
+.custom-contact__whatsapp strong {
+    color: #25D366; /* Цвет для выделения WhatsApp */
+}
